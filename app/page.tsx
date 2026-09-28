@@ -488,6 +488,27 @@ export default function Home() {
             <div>
               <p className="kicker">A little more</p>
               <h2>Engineering with ownership, clarity and curiosity.</h2>
+              <figure className="portrait">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet="/dinith-rukantha-480.webp 480w, /dinith-rukantha-960.webp 960w"
+                    sizes="(max-width: 900px) 240px, 440px"
+                  />
+                  <img
+                    src="/dinith-rukantha-960.jpg"
+                    alt="Portrait of Dinith Rukantha, Full Stack Engineer at The Students Visa"
+                    width={960}
+                    height={960}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <figcaption>
+                  <strong>{site.name}</strong>
+                  <span>{site.tagline}</span>
+                </figcaption>
+              </figure>
             </div>
             <div className="about-copy">
               <p>
