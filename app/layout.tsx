@@ -82,8 +82,10 @@ export const viewport: Viewport = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${site.url}#person`,
   name: site.name,
   url: site.url,
+  image: `${siteUrl}/opengraph-image.png`,
   email: `mailto:${site.email}`,
   jobTitle: site.role,
   description,
@@ -116,13 +118,25 @@ const personSchema = {
   sameAs: [site.linkedin, site.github],
 };
 
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: `${site.name} — Portfolio`,
+  url: site.url,
+  inLanguage: "en-GB",
+  image: `${siteUrl}/opengraph-image.png`,
+  publisher: { "@id": `${site.url}#person` },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const jsonLd = JSON.stringify(personSchema).replace(/</g, "\\u003c");
+  const jsonLd = JSON.stringify(
+    [personSchema, webSiteSchema]
+  ).replace(/</g, "\\u003c");
 
   return (
-    <html lang="en" className={`${manrope.variable} ${dmMono.variable}`}>
+    <html lang="en-GB" className={`${manrope.variable} ${dmMono.variable}`}>
       <body>
         <script
           type="application/ld+json"
