@@ -15,6 +15,8 @@ export const site = {
   email: "kaushikadinith1996@gmail.com",
   phone: "+94 713 663 873",
   phoneHref: "+94713663873",
+  phoneAlt: "+94 774 120 669",
+  phoneAltHref: "+94774120669",
   location: "Galle, Sri Lanka",
   url: siteUrl,
   linkedin: "https://www.linkedin.com/in/dinith-rukantha-5a5094145/",
@@ -38,7 +40,7 @@ export const documents = [
     file: "Dinith_Rukantha_Cover_Letter.pdf",
     href: "/Dinith_Rukantha_Cover_Letter.pdf",
     description:
-      "A general-purpose cover letter covering four years of progression, core stack and engineering approach. Tailored versions are available on request.",
+      "A general-purpose cover letter covering 4+ years of progression, core stack and engineering approach. Tailored versions are available on request.",
   },
 ] as const;
 

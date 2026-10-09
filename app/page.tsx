@@ -77,13 +77,14 @@ const projects = [
 
 const experience = [
   {
-    period: "Jul 2025 — Present",
+    period: "Jul 2025 — Oct 2026",
     role: "Senior Software Engineer",
     company: "The Students Visa",
     points: [
-      "Architected and maintain the multi-tenant platform infrastructure powering ApplyForm.io.",
-      "Engineered Counselify.ai, an AI product for CV analysis and study-abroad pathway recommendations.",
-      "Design scalable systems with React.js, Spring Boot and Redux; maintain systems on Kubernetes and AWS Lambda, ECR and S3.",
+      "Architected the multi-tenant platform that powers ApplyForm.io and continue to maintain it.",
+      "Engineered the Counselify.ai CV analysis platform, an AI product that analyses CVs and generates study-abroad pathway recommendations.",
+      "Design and build scalable features with React.js, Spring Boot and Redux.",
+      "Support production services on Kubernetes and AWS, including log monitoring, restarts and pod scaling.",
     ],
   },
   {
@@ -91,8 +92,10 @@ const experience = [
     role: "Software Engineer",
     company: "The Students Visa",
     points: [
-      "Built and maintained full-stack features across the platform portals using React.js, Spring Boot, Tailwind CSS, Redux, MySQL and MongoDB.",
-      "Integrated OpenAI APIs into the AI Counselling Assistant to automate early-stage student enquiries.",
+      "Built and maintained full-stack features across all portals on the platform using React.js, Spring Boot, Tailwind CSS, Redux, MySQL and MongoDB.",
+      "Built an event-driven notification system on AWS: EventBridge schedules messages to SQS, immediate event triggers push to the same queues, and consumers deliver SMS, email, Pusher, Slack and WhatsApp notifications.",
+      "Designed a role-based access matrix where roles grant access to specific endpoints and UI features, and admins can extend a role's access.",
+      "Integrated OpenAI APIs (via AWS Lambda) into the platform's AI Counselling Assistant, automating early-stage student enquiries.",
     ],
   },
   {
@@ -109,7 +112,7 @@ const experience = [
     role: "Software Engineer Intern",
     company: "The Students Visa",
     points: [
-      "Contributed React.js UI components, REST API integrations and Swagger-documented endpoints.",
+      "Delivered React.js UI components, REST API integrations and Swagger-documented endpoints.",
     ],
   },
   {
@@ -118,7 +121,7 @@ const experience = [
     company: "CabbageApps (Pvt) Ltd",
     points: [
       "Built React.js components and Nest.js REST APIs across multiple client projects in an Agile team.",
-      "Managed state with Redux-Saga and wrote unit/integration tests with Jest.",
+      "Managed state with Redux-Saga, built UIs with Ant Design and wrote unit/integration tests with Jest.",
     ],
   },
 ];
@@ -132,72 +135,74 @@ type SkillGroup = {
 
 const skillGroups: SkillGroup[] = [
   {
-    group: "Frontend",
+    group: "Core",
     skills: [
       "React.js",
-      "Next.js",
-      "GatsbyJS",
-      "React Native",
-      "Redux",
-      "Redux-Saga",
-      "Redux-Thunk",
+      "Redux / Redux-Thunk",
+      "Tailwind CSS",
       "Axios",
+      "Spring Boot (REST APIs)",
+      "MySQL",
+      "MongoDB",
+      "Git / GitHub / Bitbucket",
+      "Jira",
     ],
-    primary: ["React.js"],
-    primaryLabels: { "React.js": "Primary frontend framework" },
+    primary: ["React.js", "Spring Boot (REST APIs)"],
+    primaryLabels: {
+      "React.js": "Strong in React.js (CV profile summary)",
+      "Spring Boot (REST APIs)": "Strong in Spring Boot (CV profile summary)",
+    },
   },
   {
-    group: "Styling & UI",
-    skills: ["Tailwind CSS", "Ant Design", "Material UI (MUI)", "Sass", "Elstar"],
-    primary: ["Tailwind CSS"],
-    primaryLabels: { "Tailwind CSS": "Primary styling tool" },
+    group: "Intermediate · AWS",
+    skills: ["AWS Lambda", "AWS SQS", "AWS EventBridge", "AWS S3"],
   },
   {
-    group: "Backend",
-    skills: ["Spring Boot", "NestJS", "ExpressJS", "Node.js", "REST APIs", "Swagger UI"],
-    primary: ["Spring Boot"],
-    primaryLabels: { "Spring Boot": "Primary backend framework" },
+    group: "Agentic AI",
+    skills: ["Claude Code", "OpenCode"],
   },
   {
-    group: "Cloud & DevOps",
+    group: "AI Integrations",
+    skills: ["OpenAI", "DeepSeek", "Anthropic APIs"],
+  },
+  {
+    group: "Exposure",
     skills: [
       "AWS Amplify",
-      "AWS App Runner",
-      "AWS S3",
-      "AWS Lambda",
-      "AWS ECR",
-      "AWS SQS",
-      "AWS CodePipeline",
-      "Git",
-      "GitHub",
-      "Bitbucket",
-      "Docker (basics)",
-      "Kubernetes (basics)",
+      "App Runner",
+      "CodePipeline",
+      "MUI",
+      "Ant Design",
+      "Swagger UI",
     ],
   },
   {
-    group: "Databases",
-    skills: ["MySQL", "MongoDB"],
+    group: "Testing",
+    skills: ["Manual", "Exploratory", "AI-assisted"],
   },
   {
-    group: "AI & Agents",
-    skills: ["OpenAI", "Anthropic", "Claude Code", "OpenCode"],
-  },
-  {
-    group: "Languages & Tools",
+    group: "Programming",
     skills: [
-      "Python",
-      "JavaScript",
+      "Java (Spring Boot)",
+      "JavaScript (React)",
+      "Python (AWS Lambda)",
+    ],
+  },
+  {
+    group: "Tools",
+    skills: ["VS Code", "IntelliJ IDEA", "Slack"],
+  },
+  {
+    group: "Learning",
+    skills: [
+      "Next.js",
       "TypeScript",
-      "Java",
-      "C#",
-      "C",
-      "C++",
-      "PHP",
+      "Node.js / Express",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "Python",
       "Firebase",
-      "Jest",
-      "Jira",
-      "Slack",
     ],
   },
 ];
@@ -274,7 +279,7 @@ export default function Home() {
             </div>
             <div className="proof-row" aria-label="Career highlights">
               <div>
-                <strong>4 years</strong>
+                <strong>4+ years</strong>
                 <span>building software</span>
               </div>
               <div>
@@ -430,12 +435,12 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="kicker">Technical stack</p>
-              <h2>Tools I work with.</h2>
+              <h2>My toolkit.</h2>
             </div>
             <p>
-              A broad engineering toolkit, with React.js, Spring Boot and AWS at
-              the center of my professional work and Tailwind CSS as my primary
-              styling tool.
+              Core strengths in React.js and Spring Boot, practical AWS
+              experience, the AI tools I use daily, and the technologies
+              I&apos;m actively learning.
             </p>
           </div>
           <div className="skills-grid">
@@ -582,6 +587,12 @@ export default function Home() {
               href={`tel:${site.phoneHref}`}
             >
               {site.phone} <Arrow />
+            </a>
+            <a
+              className="button secondary"
+              href={`tel:${site.phoneAltHref}`}
+            >
+              {site.phoneAlt} <Arrow />
             </a>
           </div>
         </section>

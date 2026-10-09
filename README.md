@@ -70,42 +70,19 @@ settings.
 ## Content safety
 
 The portfolio uses only claims and projects represented in the supplied CV and
-cover letter, plus the additional skills the owner confirmed. It intentionally
-avoids confidential implementation details, internal company metrics, private
-architecture information, testimonials, or invented achievements. Skill entries
-marked "(basics)" reflect the level stated in the CV. No project metrics or
-user counts are claimed anywhere on the site.
+cover letter. It intentionally avoids confidential implementation details,
+internal company metrics, private architecture information, testimonials, or
+invented achievements. The technical stack mirrors the CV's own skill categories
+(Core, Intermediate · AWS, Agentic AI, AI Integrations, Exposure, Testing,
+Programming, Tools, Learning) and lists only skills the CV lists. No project
+metrics or user counts are claimed anywhere on the site.
 
-### Skills added beyond the current CV
+### CV alignment
 
-These appear on the site but are **not yet in `Dinith_Rukantha_CV.pdf`**. Update
-the CV to match, otherwise the site and CV disagree:
-
-| Site entry                    | Where it goes in the CV                                            |
-| ----------------------------- | ----------------------------------------------------------------- |
-| `Tailwind CSS` (primary)      | `Frontend` in Technical Skills — already listed, but not ranked    |
-| `Material UI (MUI)`           | `Frontend` line in Technical Skills — **new**                      |
-| `Ant Design`                  | `Frontend` line — already present                                   |
-| `Claude Code`, `OpenCode`     | `AI / APIs` line in Technical Skills — **new**                      |
-| `React.js` on Student Portal  | `KEY PROJECTS` → Student Portal description — **new**              |
-| `Elstar Admin` + Tailwind     | `KEY PROJECTS` → Student Portal description — **new**              |
-
-Suggested Technical Skills edit, replacing the `Frontend:` and `AI / APIs:` lines:
-
-```
-Frontend: React.js · Next.js · GatsbyJS · React Native · Redux · Redux-Saga · Redux-Thunk ·
-Tailwind CSS (primary) · Ant Design · Material UI · Sass · Elstar · Axios
-AI / APIs & Agents: OpenAI · Anthropic · Claude Code · OpenCode
-```
-
-And for `Student Portal — The Students Visa`, add the frontend to the existing
-sentence so it matches the site:
-
-> Self-service portal enabling students to track visa application progress,
-> upload and manage documents, schedule consultations, and monitor case status
-> in real time. The React.js frontend is built on the Elstar React admin
-> template with Tailwind CSS, on top of a multi-tenant Spring Boot back end with
-> AWS S3 document storage and MySQL/MongoDB persistence.
+The site is kept in sync with `Dinith_Rukantha_CV.pdf`. The CV covers the full
+technical skill set — including Material UI, Ant Design, Claude Code, OpenCode,
+DeepSeek, AWS EventBridge and PostgreSQL — and the site presents the same
+experience, projects and skills.
 
 ### Note on the Elstar template
 
@@ -116,13 +93,9 @@ unambiguous. The template is credited by name in the description instead, which
 is the honest framing: the portal is the candidate's work, the template is
 third-party.
 
-### Known, accepted divergence
+### Site-specific detail
 
-The CV PDF is intentionally left as-is at the owner's request. The site is a
-strict superset of the CV: everything on the CV appears on the site, and the
-site additionally lists `Material UI`, `Claude Code`, `OpenCode`, the Elstar
-frontend detail, and marks Tailwind CSS as primary. A recruiter may notice the
-site lists more than the CV; that is low risk because the site is additive, but
-it is worth aligning the CV at the next natural revision.
+The only detail on the site that goes beyond the CV is the `Elstar` React admin
+template credited in the Student Portal description (see above).
 
 
