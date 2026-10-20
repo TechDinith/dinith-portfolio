@@ -74,7 +74,7 @@ cover letter. It intentionally avoids confidential implementation details,
 internal company metrics, private architecture information, testimonials, or
 invented achievements. The technical stack mirrors the CV's own skill categories
 (Core, Intermediate · AWS, Agentic AI, AI Integrations, Exposure, Testing,
-Programming, Tools, Learning) and lists only skills the CV lists. No project
+Programming, Tools) and lists only skills the CV lists. No project
 metrics or user counts are claimed anywhere on the site.
 
 ### CV alignment

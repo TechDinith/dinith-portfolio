@@ -168,11 +168,19 @@ const skillGroups: SkillGroup[] = [
   {
     group: "Exposure",
     skills: [
+      "Next.js",
+      "TypeScript",
+      "Node.js / Express",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "Python",
+      "Firebase",
+      "MUI",
+      "Ant Design",
       "AWS Amplify",
       "App Runner",
       "CodePipeline",
-      "MUI",
-      "Ant Design",
       "Swagger UI",
     ],
   },
@@ -182,28 +190,11 @@ const skillGroups: SkillGroup[] = [
   },
   {
     group: "Programming",
-    skills: [
-      "Java (Spring Boot)",
-      "JavaScript (React)",
-      "Python (AWS Lambda)",
-    ],
+    skills: ["Java", "JavaScript / TypeScript", "Python"],
   },
   {
     group: "Tools",
     skills: ["VS Code", "IntelliJ IDEA", "Slack"],
-  },
-  {
-    group: "Learning",
-    skills: [
-      "Next.js",
-      "TypeScript",
-      "Node.js / Express",
-      "PostgreSQL",
-      "Docker",
-      "Kubernetes",
-      "Python",
-      "Firebase",
-    ],
   },
 ];
 
@@ -439,8 +430,8 @@ export default function Home() {
             </div>
             <p>
               Core strengths in React.js and Spring Boot, practical AWS
-              experience, the AI tools I use daily, and the technologies
-              I&apos;m actively learning.
+              experience, the AI tools I use daily, and the wider technologies
+              I have exposure to.
             </p>
           </div>
           <div className="skills-grid">
